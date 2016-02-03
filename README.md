@@ -1,0 +1,1 @@
+# docker-centos6-php5.4-pgsql
