@@ -1,0 +1,22 @@
+db:
+    image: postgres:9.3
+    environment:
+        POSTGRES_USER: 'postgres'
+        POSTGRES_PASSWORD: 'postgres'
+    ports:
+        - '5432:5432'
+    volumes_from:
+        - datastore
+web:
+    build: containers/web
+    ports:
+        - '80:80'
+    volumes_from:
+        - datastore
+    volumes:
+        - /var/www:/var/www
+    links:
+        - db
+
+datastore:
+    build: containers/datastore
