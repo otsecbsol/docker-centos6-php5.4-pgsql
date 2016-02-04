@@ -14,7 +14,7 @@ web:
     volumes_from:
         - datastore
     volumes:
-        - /var/www:/var/www
+        - %%HOST_VOLUME_ROOT%%:/var/www/html
     links:
         - db
 

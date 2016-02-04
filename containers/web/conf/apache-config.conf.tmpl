@@ -1,10 +1,10 @@
 LoadModule rewrite_module modules/mod_rewrite.so
 <VirtualHost *:80>
-    DocumentRoot /var/www/html/hello-laravel5.0/public
+    DocumentRoot %%DOC_ROOT%%
 
     RewriteEngine On
 
-    <Directory "/var/www/html/hello-laravel5.0/public">
+    <Directory "%%DOC_ROOT%%">
         order   deny,allow
         allow   from all
         AllowOverride All
