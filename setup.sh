@@ -27,5 +27,5 @@ fi
 echo $volume_root
 echo $doc_root
 
-cat ${DOCKER_COMPOSE_CONF}.tmpl | sed -e "s#%%HOST_VOLUME_ROOT%%#$volume_root#g" > ${DOCKER_COMPOSE_CONF}.test
-cat ${APACHE_CONF}.tmpl | sed -e "s#%%DOC_ROOT%%#$doc_root#g" > ${APACHE_CONF}.test
+cat ${DOCKER_COMPOSE_CONF}.tmpl | sed -e "s#%%HOST_VOLUME_ROOT%%#$volume_root#g" > ${DOCKER_COMPOSE_CONF}
+cat ${APACHE_CONF}.tmpl | sed -e "s#%%DOC_ROOT%%#$doc_root#g" > ${APACHE_CONF}
